@@ -1,13 +1,69 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumindo api</title>
+    <title>Consulta CEP</title>
 </head>
-<body>
-        <script src="index.js"></script>
-    
+
+<style> 
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+  border: 1px solid black;
+  height: 250px;
+  width: 500px;
+  margin-left: 35%;
+ 
+
+   }
+ 
+   h1{
+    text-align: center;
+   }
+ .form-group{
+    margin-top: 20px;
+
+   }
+   </style>
+<body> <div>
+
+
+<h1>Consultando CEP</h1>
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" maxlength="9" id="cep">
+                <small>00000-000</small>
+            </div>
+            <div class="form-group">
+                <label for="logradouro">Logradouro</label>
+                <input type="text" class="form-control" id="logradouro">
+                <small>Rua.</small>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control" id="bairro">
+                <small>Bairro</small>
+            </div>
+            <div class="form-group">
+                <label for="localidade">Localidade</label>
+                <input type="text" class="form-control" id="localidade">
+                <small>Cidade</small>
+            </div>
+            <div class="form-group">
+                <label for="uf">UF</label>
+                <input type="text" class="form-control" id="uf">
+                <small>Estado</small>
+            </div>
+        </form>
+        <input type="button" value="Nova pesquisa" onClick="window.location.reload()"> 
+        
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
